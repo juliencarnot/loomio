@@ -6,6 +6,18 @@ angular.module('loomioApp').controller 'ExplorePageController', (Records, $rootS
   @perPage = AppConfig.pageSize.exploreGroups
   @canLoadMoreGroups = true
   @query = ""
+  @sortByOptions =  [
+        {"value":'-name',"name":'Z to A'},
+        {"value":'name',"name":'A to Z'},
+        {"value":'-discussionsCount',"name":'Most discussions'},
+        {"value":'discussionsCount',"name":'Least discussions'},
+        {"value":'-recentActivityCount',"name":'Most recent activity'},
+        {"value":'recentActivityCount',"name":'Least recent activity'},
+        {"value":'-createdAt',"name":'Oldest group'},
+        {"value":'createdAt',"name":'Newest group'}
+]
+
+  @sortBy = @sortByOptions[0]
   $timeout -> document.querySelector('#search-field').focus()
 
   @groups = =>

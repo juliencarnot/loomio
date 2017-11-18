@@ -1,7 +1,12 @@
 .explore-page {
   @include cardPadding;
 }
-
+.explore-page__sort-select {
+  display:flex;
+  justify-content: flex-end;
+  color: $primary-text-color;
+  width: 100%;
+  margin: 20px 0;}
 .explore-page__search-field {
   position: relative;
   background-color: $background-color;
