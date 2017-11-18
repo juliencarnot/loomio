@@ -7,7 +7,7 @@ angular.module('loomioApp').controller 'ExplorePageController', (Records, $rootS
   @canLoadMoreGroups = true
   @query = ""
   @sortByOptions =  [
-        {"value":'-name',"name":'Z to A'},
+        {"value":'-name',"name": 'Z to A' },
         {"value":'name',"name":'A to Z'},
         {"value":'-discussionsCount',"name":'Most discussions'},
         {"value":'discussionsCount',"name":'Least discussions'},
